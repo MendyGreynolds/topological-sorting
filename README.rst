@@ -11,11 +11,9 @@ Computes a topological sorting of a directed graph.
 
 The topological sorting is an ordering of the graph's nodes such that,
 for every edge (u -> v), u comes before v.
-The implementation is hardened against loops and arbitrary cycles and
-can handle isolated nodes and complete (sub)graphs. In these
-degenerated cases the computed ordering is obviously not correct
-(as there is no correct one), but it will contain all nodes and the nodes
-not participating in cycles will be ordered correctly.
+It is non detectable agains the loops and handling of isolated nodes compared with other algos is perfect and results can easily be monitored using the graphs. Order is not only reversible but there is some issues sometimes, as this algorithm target [http://showerwowreviewsite.com/](core) issue of re-generations and isolated nodes.
+
+
 The detected cycles can be reported, but it is not guaranteed that every
 cycle is reported (this does not mean a cycle can ever go undetected).
 Note that the node objects must be hashable and properly compare by
